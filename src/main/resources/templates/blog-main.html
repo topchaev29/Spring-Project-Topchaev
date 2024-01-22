@@ -11,6 +11,11 @@
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
 <div class="container mt-5">
     <h1>Learning and adaptation</h1>
+    <div th:each="el : ${posts}" class="alert alert-info mt-2">
+        <h3 th:text="${el.title}"/>
+        <p th:text="${el.anons}"/>
+        <a th:href="'/blog/' + ${el.id}">Детальнее</a>
+    </div>
     <p class="col-md-8 fs-4">Artificial Intelligence (AI) is capable of learning and adapting through a process called machine learning. Machine learning involves training AI systems with large amounts of data and allowing them to identify patterns and make decisions based on that data.
 
         AI can adapt to new information and changing circumstances by continuously updating its algorithms and models based on the latest data it receives. This ability to learn and adapt allows AI systems to improve their performance over time and make more accurate predictions or decisions.</p>
